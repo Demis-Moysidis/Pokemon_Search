@@ -1,0 +1,27 @@
+.card-container {
+  display: flex;
+  gap: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+
+  flex-wrap: wrap;
+}
+.filter-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 2vh;
+}
+
+.flex-container {
+  flex-grow: 1;
+}
+
+/*
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+
+}
+*/

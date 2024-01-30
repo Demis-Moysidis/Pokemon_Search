@@ -1,0 +1,101 @@
+.cardTrans {
+  transition: all 0.3s;
+}
+
+.cardTrans:hover {
+  transform: scale(1.1);
+}
+
+.badge {
+  margin-right: 4px;
+}
+
+.text-bg-normalPK {
+  color: #fff;
+  background-color: RGBA(168, 168, 120);
+}
+
+.text-bg-firePK {
+  color: #fff;
+  background-color: RGBA(240, 128, 48);
+}
+
+.text-bg-waterPK {
+  color: #fff;
+  background-color: RGBA(104, 144, 240);
+}
+
+.text-bg-electricPK {
+  color: #fff;
+  background-color: RGBA(248, 208, 48);
+}
+
+.text-bg-grassPK {
+  color: #fff;
+  background-color: RGBA(120, 200, 80);
+}
+
+.text-bg-icePK {
+  color: #fff;
+  background-color: RGBA(152, 216, 216);
+}
+
+.text-bg-fightingPK {
+  color: #fff;
+  background-color: RGBA(192, 48, 40);
+}
+
+.text-bg-poisonPK {
+  color: #fff;
+  background-color: RGBA(160, 64, 160);
+}
+
+.text-bg-groundPK {
+  color: #fff;
+  background-color: RGBA(224, 192, 104);
+}
+
+.text-bg-flyingPK {
+  color: #fff;
+  background-color: RGBA(168, 144, 240);
+}
+
+.text-bg-psychicPK {
+  color: #fff;
+  background-color: RGBA(248, 88, 136);
+}
+
+.text-bg-bugPK {
+  color: #fff;
+  background-color: RGBA(168, 184, 32);
+}
+
+.text-bg-rockPK {
+  color: #fff;
+  background-color: RGBA(184, 160, 56);
+}
+
+.text-bg-ghostPK {
+  color: #fff;
+  background-color: RGBA(112, 88, 152);
+}
+
+.text-bg-dragonPK {
+  color: #fff;
+  background-color: RGBA(112, 56, 248);
+}
+
+.text-bg-darkPK {
+  color: #fff;
+  background-color: RGBA(112, 88, 72);
+}
+
+.text-bg-steelPK {
+  color: #fff;
+  background-color: RGBA(184, 184, 208);
+}
+
+.text-bg-fairyPK {
+  color: #fff;
+  background-color: RGBA(240, 182, 188);
+}

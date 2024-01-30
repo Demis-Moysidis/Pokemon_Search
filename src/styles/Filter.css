@@ -1,0 +1,18 @@
+.border-color-btn {
+  border-color: white;
+}
+
+.disabled-type {
+  opacity: 0.5;
+}
+
+.type-filter-container {
+  margin-bottom: 1.5vh;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap-reverse;
+}

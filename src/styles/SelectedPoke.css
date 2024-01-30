@@ -1,0 +1,22 @@
+.center-title-and-close-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200, 0.4);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow-container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-color {
+  background-color: rgba(248, 215, 218, 1);
+}

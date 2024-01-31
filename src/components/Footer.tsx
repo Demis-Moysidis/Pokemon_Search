@@ -10,7 +10,11 @@ const Footer = () => {
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <img src="/src/img/pokemon-23.svg" alt="Bootstrap" width="70" />
+            <img
+              src="/Pokemon_Search/assets/pokemon-23-f217e711.svg"
+              alt="Pokemon"
+              width="70"
+            />
           </a>
         </div>
       </footer>

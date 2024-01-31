@@ -12,7 +12,11 @@ const NavBar = ({ onSearch, onSetQyeryBySearch }: Props) => {
       <nav className="navbar bg-body-tertiary background-color-nav">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <img src="/src/img/pokemon-23.svg" alt="Bootstrap" width="120" />
+            <img
+              src="/Pokemon_Search/assets/pokemon-23-f217e711.svg"
+              alt="Pokemon"
+              width="120"
+            />
           </a>
           <form className="d-flex" role="search">
             <input
@@ -22,7 +26,6 @@ const NavBar = ({ onSearch, onSetQyeryBySearch }: Props) => {
               aria-label="Search"
               onChange={(e) => {
                 onSearch(e.target.value);
-                //onSetUdatePokeCards();
                 onSetQyeryBySearch();
               }}
             />

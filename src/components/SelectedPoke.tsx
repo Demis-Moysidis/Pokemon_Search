@@ -126,7 +126,7 @@ const SelectedPoke = ({ onClose, onTheSelectedPokemon }: Props) => {
       {show && (
         <div className="modalBackground">
           <div
-            className="card shadow-container mb-3"
+            className="card shadow-container mb-3 margin-card"
             style={{ maxWidth: "540px" }}
           >
             <div className="row g-0">

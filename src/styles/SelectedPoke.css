@@ -20,3 +20,7 @@
 .card-color {
   background-color: rgba(248, 215, 218, 1);
 }
+
+.margin-card {
+  margin: 20px;
+}

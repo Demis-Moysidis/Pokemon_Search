@@ -65,7 +65,7 @@ const InfiniteList: React.FC<Props> = ({
         }}
         key={item.id}
         className="card cardTrans"
-        style={{ width: "10.5rem", maxHeight: "290px" }}
+        style={{ width: "10.2rem", maxHeight: "290px" }}
       >
         <div
           style={{

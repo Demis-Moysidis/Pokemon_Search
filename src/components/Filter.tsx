@@ -26,10 +26,18 @@ function Filter({
 }: Props) {
   const deactivatedOpacity = 0.3;
 
+  /*Checks whether a type has been selected for the first time. Therefore this check is only valid once at the beginning*/
+  const [checkIfFirstSelectedType, setcheckIfFirstSelectedType] =
+    useState(true);
+
   const setActiveTypesList = (clickedItem: String) => {
+    if (checkIfFirstSelectedType) {
+      setcheckIfFirstSelectedType(false);
+      setAllTypesToDeactive();
+    }
+
     const clonedActiveTypes = [...onSetFilter];
-    let check = true;
-    clonedActiveTypes.forEach((element) => {
+    clonedActiveTypes.forEach((element: any) => {
       if (element[0] === clickedItem) {
         if (element[1] === 1) {
           element[1] = deactivatedOpacity;

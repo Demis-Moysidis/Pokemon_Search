@@ -6,6 +6,16 @@ import * as HelperFunction from "./HelperFunctions";
 import "../styles/PokeCard.css";
 import { useIntersection } from "@mantine/hooks";
 
+interface OnePoke {
+  id: number;
+  name: string;
+  order: number;
+  types: string[];
+  img: any;
+  weight: number;
+  height: number;
+}
+
 interface Props {
   onOpen: () => void;
   onSelectedPokemon: (id: number) => void;
@@ -56,7 +66,7 @@ const InfiniteList: React.FC<Props> = ({
 
   const _posts = data?.pages.flatMap((page) => page);
 
-  const setPokeCard = (item: any) => {
+  const setPokeCard = (item: OnePoke) => {
     return (
       <div
         onClick={() => {
@@ -101,7 +111,7 @@ const InfiniteList: React.FC<Props> = ({
   return (
     <>
       <div className="card-container">
-        {_posts?.map((item: any, index) => {
+        {_posts?.map((item: OnePoke, index) => {
           if (index === _posts.length - 1)
             return (
               <div key={item.id} ref={ref}>

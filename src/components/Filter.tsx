@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import pokemonDataJSONFile from "../pokeData/PokeCard.json";
 
 interface Props {
-  onSetFilter: any;
-  onSetActiveTypes: (list: any) => void;
+  onSetFilter: (string | number)[][];
+  onSetActiveTypes: (list: (string | number)[][]) => void;
   onUpdatePokeData: (pokeList: any) => void;
   onPokeData: any[];
-  onSearchByName: any;
+  onSearchByName: String;
   onSetUdatePokeCards: () => void;
   onSetQyeryBySearch: () => void;
   onSetQueryForSearch: boolean;
@@ -37,7 +37,7 @@ function Filter({
     }
 
     const clonedActiveTypes = [...onSetFilter];
-    clonedActiveTypes.forEach((element: any) => {
+    clonedActiveTypes.forEach((element: (string | number)[]) => {
       if (element[0] === clickedItem) {
         if (element[1] === 1) {
           element[1] = deactivatedOpacity;

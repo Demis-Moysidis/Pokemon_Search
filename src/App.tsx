@@ -35,7 +35,7 @@ function App() {
     ["steel", 1],
     ["fairy", 1],
   ];
-  const [activeTypes, setActiveTypes] = useState<any>(types);
+  const [activeTypes, setActiveTypes] = useState<(string | number)[][]>(types);
 
   const [search, setSearch] = useState<String>("");
 

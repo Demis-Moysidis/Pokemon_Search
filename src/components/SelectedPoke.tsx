@@ -2,13 +2,31 @@ import { useState, useEffect } from "react";
 import * as HelperFunction from "./HelperFunctions";
 import "../styles/SelectedPoke.css";
 
+interface PokeTypeList {
+  slot: number;
+  type: {
+    name: string;
+    url: string;
+  };
+}
+
+interface OnePoke {
+  id: number;
+  name: string;
+  order: number;
+  types: PokeTypeList[];
+  img: any;
+  weight: number;
+  height: number;
+}
+
 interface Props {
   onClose: () => void;
   onTheSelectedPokemon: number;
 }
 
 const SelectedPoke = ({ onClose, onTheSelectedPokemon }: Props) => {
-  const [pokeDataToUse, setPokeDataToUse] = useState<any>([]);
+  const [pokeDataToUse, setPokeDataToUse] = useState<OnePoke | any>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [show, setShow] = useState(false);
@@ -19,10 +37,10 @@ const SelectedPoke = ({ onClose, onTheSelectedPokemon }: Props) => {
         const response = await fetch(
           `https://pokeapi.co/api/v2/pokemon/${onTheSelectedPokemon}`
         );
-        const pokeData = (await response.json()) as Props[];
+        const pokeData = (await response.json()) as OnePoke;
 
         if (response.status === 200) {
-          const sortedData: any = sortJsonData(pokeData);
+          const sortedData = sortJsonData(pokeData);
           setPokeDataToUse(sortedData);
           setShow(true);
         } else {
@@ -37,9 +55,10 @@ const SelectedPoke = ({ onClose, onTheSelectedPokemon }: Props) => {
     fetchPokeData();
   }, []);
 
-  function sortJsonData(jsonData: any) {
+  function sortJsonData(jsonData: OnePoke) {
     const parameter = jsonData.types;
-    let typesList = (parameter: any) => {
+    console.log("Inside of jsonData: ", jsonData);
+    let typesList = (parameter: PokeTypeList[]) => {
       let list = [];
       for (let i = 0; i < parameter.length; i++) {
         list.push(parameter[i].type.name);
